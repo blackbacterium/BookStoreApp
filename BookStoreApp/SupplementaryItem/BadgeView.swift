@@ -33,6 +33,10 @@ private extension BadgeView {
 		badgeLabel.font = .systemFont(ofSize: 16, weight: .bold)
 		badgeLabel.textAlignment = .center
 		badgeLabel.layer.cornerRadius = 6
+		badgeLabel.layer.maskedCorners = [
+			.layerMinXMinYCorner,
+			.layerMaxXMinYCorner
+		]
 		badgeLabel.layer.masksToBounds = true
 		addSubview(badgeLabel)
 	}
